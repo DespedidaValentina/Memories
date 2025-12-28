@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Un regalo especial de Eduardo, Marcel y Jean para Tina - Álbum de fotos interactivo">
+    <title>Para Tina ✨</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Animated Gradient Background -->
+    <div class="gradient-bg">
+        <div class="gradient-orb gradient-orb-1"></div>
+        <div class="gradient-orb gradient-orb-2"></div>
+        <div class="gradient-orb gradient-orb-3"></div>
+    </div>
+
+    <!-- Floating Images Container (Landing) -->
+    <div id="floating-container" class="floating-container"></div>
+
+    <!-- Landing Page -->
+    <section id="landing" class="landing">
+        <div class="landing-card glass">
+            <div class="sparkle sparkle-1">✨</div>
+            <div class="sparkle sparkle-2">💫</div>
+            <div class="sparkle sparkle-3">⭐</div>
+            <h1 class="landing-title">
+                <span class="from-text">De:</span>
+                <span class="names">Eduardo, Marcel y Jean</span>
+                <span class="to-text">Para:</span>
+                <span class="recipient">Tina</span>
+            </h1>
+            <p class="landing-subtitle">Un álbum lleno de momentos especiales</p>
+            <button id="start-btn" class="start-btn">
+                <span>Empezar</span>
+                <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Slideshow Section -->
+    <section id="slideshow" class="slideshow hidden">
+        <!-- Slide Container -->
+        <div id="slides-container" class="slides-container"></div>
+
+        <!-- Navigation Controls -->
+        <div class="nav-controls">
+            <button id="prev-btn" class="nav-btn" aria-label="Anterior">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button id="next-btn" class="nav-btn nav-btn-primary" aria-label="Siguiente">
+                <span>Siguiente</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </button>
+            <button id="prev-btn-arrow" class="nav-btn" aria-label="Siguiente">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+            <span id="progress-text" class="progress-text">0%</span>
+        </div>
+
+        <!-- Back to Start -->
+        <button id="back-to-start" class="back-btn glass" aria-label="Volver al inicio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+        </button>
+    </section>
+
+    <!-- End Screen -->
+    <section id="end-screen" class="end-screen hidden">
+        <div class="end-card glass">
+            <div class="heart-animation">💕</div>
+            <h2 class="end-title">¡Gracias por ver!</h2>
+            <p class="end-message">Estos momentos son especiales para nosotros, y tú eres parte importante de cada uno.
+            </p>
+            <div class="end-signatures">
+                <span>Con cariño,</span>
+                <strong>Eduardo, Marcel y Jean</strong>
+            </div>
+            <button id="restart-btn" class="start-btn">
+                <svg class="btn-arrow rotate" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+                <span>Ver de nuevo</span>
+            </button>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
